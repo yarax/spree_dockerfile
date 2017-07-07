@@ -30,5 +30,4 @@ RUN AUTO_ACCEPT=1 rails g spree:install --user_class=Spree::User
 RUN rails g spree:auth:install
 RUN rails g spree_gateway:install --auto_run_migrations=true
 EXPOSE 3000
-RUN echo "<script src='https://s3-eu-west-1.amazonaws.com/analytics-js-tracker/piwik_extended.js'></script>" >> /var/lib/gems/2.3.0/gems/spree_frontend-3.1.5/app/views/spree/layouts/spree_application.html.erb
 CMD ["rails", "server", "-b", "0.0.0.0"]
